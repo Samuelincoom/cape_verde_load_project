@@ -4,7 +4,7 @@ ok guys, this repo is our shared workspae for the Cabo Verde 2023 hourly load da
 
 ## What this repo does
 
-ok guys, the main goal here is to keep the anlysis easy to follow for the group:
+the main goal here is to keep the anlysis easy to follow for the group:
 
 - pull the Cabo Verde load series from Electricity Maps
 - save the raw API responses and validation notes
@@ -14,7 +14,7 @@ ok guys, the main goal here is to keep the anlysis easy to follow for the group:
 
 ## Important caveats
 
-ok guys, pleease keep these points in mind when we talk about the results:
+pleease keep these points in mind when we talk about the results:
 
 - the Cabo Verde series in this repo is estimated, not reported
 - the Santiago file is proxy, not measured
@@ -33,7 +33,7 @@ ok guys, pleease keep these points in mind when we talk about the results:
 
 ## How to use it
 
-ok guys, if we need to rerun everthing later, the rough flow is:
+if we need to rerun everthing later, the rough flow is:
 
 1. run `fetch_cape_verde_load.py`
 2. inspect the validation and zone notes
@@ -42,4 +42,4 @@ ok guys, if we need to rerun everthing later, the rough flow is:
 
 ## Group note
 
-ok guys, this repo is meant to be freindly and practical rather than fancy. if something looks a bit wierd in the files, check the method notes first becuase they explain what is real, what is scaled, and what is modeled.
+ok guys, if something looks a bit wierd in the files, check the method notes first becuase they explain what is real, what is scaled, and what is modeled. just like what i explained in the whatsapp messages i texted

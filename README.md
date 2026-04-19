@@ -17,7 +17,6 @@ the main goal here is to keep the anlysis easy to follow for the group:
 pleease keep these points in mind when we talk about the results:
 
 - the raw version of Cabo Verde series in this repo is estimated to 90% accuracy and 80% accurate, not reported. like i said, we wait to see if the governemnt will respond to our email
-- 
 - again, also the Santiago file is proxy, not measured
 - this is fine for academic coursework and class discusion. the 80% is more than fine
 - so this is not an officail utility planning dataset

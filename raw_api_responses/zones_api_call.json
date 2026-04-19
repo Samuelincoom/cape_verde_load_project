@@ -1,0 +1,13 @@
+{
+  "requested_at_utc": "2026-04-18T16:36:29Z",
+  "path": "/zones",
+  "url": "https://api.electricitymap.org/v3/zones",
+  "params": {
+    "disableCallerLookup": "true"
+  },
+  "attempt": 1,
+  "status_code": 200,
+  "ok": true,
+  "content_type": "application/json; charset=utf-8",
+  "response_json": {}
+}

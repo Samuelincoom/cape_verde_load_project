@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0" y="0" width="1200" height="720" fill="#f8fafc"/>
+<text x="50" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">Scenario A: Weekly Average Storage Level</text>
+<text x="90" y="80" font-family="Arial, sans-serif" font-size="16" fill="#475569">Average stored energy in the workbook's storage-level column across 2023.</text>
+<line x1="90" y1="600" x2="1110" y2="600" stroke="#94a3b8" stroke-width="2"/>
+<line x1="90" y1="100" x2="90" y2="600" stroke="#94a3b8" stroke-width="2"/>
+<text x="30" y="350" transform="rotate(-90 30 350)" font-family="Arial, sans-serif" font-size="15" fill="#334155">MWh</text>
+<line x1="90" y1="600.00" x2="1110" y2="600.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="605.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">64.6</text>
+<line x1="90" y1="500.00" x2="1110" y2="500.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="505.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">141.4</text>
+<line x1="90" y1="400.00" x2="1110" y2="400.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="405.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">218.3</text>
+<line x1="90" y1="300.00" x2="1110" y2="300.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="305.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">295.1</text>
+<line x1="90" y1="200.00" x2="1110" y2="200.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="205.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">371.9</text>
+<line x1="90" y1="100.00" x2="1110" y2="100.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="105.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">448.7</text>
+<line x1="90.00" y1="600" x2="90.00" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="90.00" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569">Jan</text>
+<line x1="168.46" y1="600" x2="168.46" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="168.46" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="246.92" y1="600" x2="246.92" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="246.92" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="325.38" y1="600" x2="325.38" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="325.38" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="403.85" y1="600" x2="403.85" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="403.85" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="482.31" y1="600" x2="482.31" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="482.31" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="560.77" y1="600" x2="560.77" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="560.77" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="639.23" y1="600" x2="639.23" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="639.23" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="717.69" y1="600" x2="717.69" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="717.69" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="796.15" y1="600" x2="796.15" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="796.15" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="874.62" y1="600" x2="874.62" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="874.62" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="953.08" y1="600" x2="953.08" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="953.08" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569">Nov</text>
+<line x1="1031.54" y1="600" x2="1031.54" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="1031.54" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569">Dec</text>
+<line x1="1110.00" y1="600" x2="1110.00" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="1110.00" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<polyline fill="none" stroke="#7c3aed" stroke-width="3" points="90.00,355.46 109.62,112.96 129.23,123.57 148.85,113.51 168.46,341.05 188.08,103.97 207.69,108.65 227.31,100.00 246.92,104.00 266.54,112.42 286.15,162.31 305.77,145.82 325.38,293.72 345.00,389.77 364.62,185.59 384.23,334.67 403.85,114.87 423.46,179.34 443.08,242.08 462.69,212.95 482.31,130.14 501.92,135.86 521.54,217.28 541.15,522.00 560.77,368.44 580.38,441.71 600.00,505.42 619.62,489.03 639.23,509.67 658.85,443.52 678.46,473.09 698.08,600.00 717.69,478.30 737.31,398.01 756.92,493.05 776.54,490.28 796.15,367.77 815.77,359.05 835.38,416.02 855.00,201.72 874.62,561.00 894.23,584.65 913.85,351.08 933.46,247.82 953.08,358.15 972.69,189.85 992.31,259.07 1011.92,347.12 1031.54,440.39 1051.15,176.75 1070.77,168.34 1090.38,124.25 1110.00,236.09"/>
+<line x1="110" y1="680" x2="138" y2="680" stroke="#7c3aed" stroke-width="4"/>
+<text x="146" y="685" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">Storage level</text>
+</svg>

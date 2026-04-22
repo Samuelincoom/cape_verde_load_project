@@ -1,0 +1,1471 @@
+[
+  {
+    "id": "pv",
+    "name": "Solar photovoltaic power (PV)",
+    "default_dataset": "merra2",
+    "dataset_help": "MERRA has global coverage, while CM-SAF covers only Europe but with higher data quality.",
+    "datasets": [
+      {
+        "id": "merra2",
+        "name": "MERRA-2 (global)",
+        "daterange": [
+          "2019-01-01",
+          "2019-12-31"
+        ],
+        "bounds": [
+          90,
+          -180,
+          -90,
+          180
+        ]
+      },
+      {
+        "id": "sarah",
+        "name": "CM-SAF SARAH (Europe)",
+        "daterange": [
+          "2015-01-01",
+          "2015-12-31"
+        ],
+        "bounds": [
+          65,
+          -11,
+          24,
+          44
+        ]
+      }
+    ],
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "license_name": "Creative Commons Attribution-NonCommercial",
+    "citation_url": "https://doi.org/10.1016/j.energy.2016.08.060",
+    "citation_name": "Pfenninger and Staffell (2016)",
+    "max_daterange": "P1Y",
+    "version": "1.4 (gsee f9b6961)",
+    "fields": [
+      {
+        "id": "capacity",
+        "name": "Capacity (kW)",
+        "help": "Maximum AC electrical power that the system is capable of generating (in kW).",
+        "type": "float",
+        "min": 0,
+        "default": 1
+      },
+      {
+        "id": "system_loss",
+        "name": "System loss (fraction)",
+        "help": "The combined losses from all system components (e.g. inverter, tracking system), relative to instantaneous output.",
+        "type": "float",
+        "min": 0,
+        "max": 1,
+        "default": 0.1
+      },
+      {
+        "id": "tracking",
+        "name": "Tracking",
+        "type": "dropdown",
+        "dropdown_type": "integer",
+        "options": [
+          {
+            "value": 0,
+            "label": "None"
+          },
+          {
+            "value": 1,
+            "label": "1-axis (azimuth)"
+          },
+          {
+            "value": 2,
+            "label": "2-axis (tilt & azimuth)"
+          }
+        ],
+        "default": 0
+      },
+      {
+        "id": "tilt",
+        "name": "Tilt (\u00b0)",
+        "help": "How far the panel is inclined from the horizontal, in degrees. A tilt of 0\u00b0 is a panel facing directly upwards, 90\u00b0 is a panel installed vertically, facing sideways.",
+        "type": "integer",
+        "min": 0,
+        "max": 90,
+        "default": 35
+      },
+      {
+        "id": "azim",
+        "name": "Azimuth (\u00b0)",
+        "help": "Compass direction the panel is facing (clockwise). An azimuth angle of 180 degrees means poleward facing, so for latitudes >=0 is interpreted as southwards facing, else northwards facing.",
+        "type": "integer",
+        "min": 0,
+        "max": 360,
+        "default": 180
+      },
+      {
+        "id": "raw",
+        "name": "Include raw data",
+        "help": "Tick this box to include additional columns with the underlying weather data used in the model, rather than just the model output itself. Raw weather data is included in the downloadable output file but not visualized in the web application.",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "id": "wind",
+    "name": "Wind power",
+    "default_dataset": "merra2",
+    "datasets": [
+      {
+        "id": "merra2",
+        "name": "MERRA-2 (global)",
+        "daterange": [
+          "2019-01-01",
+          "2019-12-31"
+        ],
+        "bounds": [
+          80,
+          -180,
+          -80,
+          180
+        ]
+      }
+    ],
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "license_name": "Creative Commons Attribution-NonCommercial",
+    "citation_url": "https://doi.org/10.1016/j.energy.2016.08.068",
+    "citation_name": "Staffell and Pfenninger (2016)",
+    "max_daterange": "P1Y",
+    "version": 1.4,
+    "fields": [
+      {
+        "id": "capacity",
+        "name": "Capacity (kW)",
+        "help": "Maximum AC electrical power that the system is capable of generating (in kW).",
+        "type": "float",
+        "min": 0,
+        "default": 1
+      },
+      {
+        "id": "height",
+        "name": "Hub height (m)",
+        "help": "The height of the turbine's tower, that is, how far the blades are centred above the ground. Hub heights are limited to between 10 and 150 m.",
+        "type": "float",
+        "min": 10,
+        "default": 80,
+        "max": 300
+      },
+      {
+        "id": "turbine",
+        "name": "Turbine model",
+        "help": "The model of wind turbine affects how much power is produced at different wind speeds. Model names typically include the manufacturer, the blade diameter (in metres) and the rated capacity (in kW or MW).",
+        "type": "dropdown",
+        "dropdown_type": "string",
+        "options": [
+          {
+            "value": "Acciona AW77 1500",
+            "label": "Acciona AW77 1500"
+          },
+          {
+            "value": "Alstom Eco 110",
+            "label": "Alstom Eco 110"
+          },
+          {
+            "value": "Alstom Eco 74",
+            "label": "Alstom Eco 74"
+          },
+          {
+            "value": "Alstom Eco 80",
+            "label": "Alstom Eco 80"
+          },
+          {
+            "value": "Bonus B23 150",
+            "label": "Bonus B23 150"
+          },
+          {
+            "value": "Bonus B33 300",
+            "label": "Bonus B33 300"
+          },
+          {
+            "value": "Bonus B37 450",
+            "label": "Bonus B37 450"
+          },
+          {
+            "value": "Bonus B41 500",
+            "label": "Bonus B41 500"
+          },
+          {
+            "value": "Bonus B44 600",
+            "label": "Bonus B44 600"
+          },
+          {
+            "value": "Bonus B54 1000",
+            "label": "Bonus B54 1000"
+          },
+          {
+            "value": "Bonus B62 1300",
+            "label": "Bonus B62 1300"
+          },
+          {
+            "value": "Bonus B82 2300",
+            "label": "Bonus B82 2300"
+          },
+          {
+            "value": "Dewind D4 41 500",
+            "label": "Dewind D4 41 500"
+          },
+          {
+            "value": "Dewind D6 62 1000",
+            "label": "Dewind D6 62 1000"
+          },
+          {
+            "value": "Enercon E101 3000",
+            "label": "Enercon E101 3000"
+          },
+          {
+            "value": "Enercon E101 3500",
+            "label": "Enercon E101 3500"
+          },
+          {
+            "value": "Enercon E103 2350",
+            "label": "Enercon E103 2350"
+          },
+          {
+            "value": "Enercon E112 4500",
+            "label": "Enercon E112 4500"
+          },
+          {
+            "value": "Enercon E115 2500",
+            "label": "Enercon E115 2500"
+          },
+          {
+            "value": "Enercon E115 3000",
+            "label": "Enercon E115 3000"
+          },
+          {
+            "value": "Enercon E115 3200",
+            "label": "Enercon E115 3200"
+          },
+          {
+            "value": "Enercon E126 3500",
+            "label": "Enercon E126 3500"
+          },
+          {
+            "value": "Enercon E126 4000",
+            "label": "Enercon E126 4000"
+          },
+          {
+            "value": "Enercon E126 4200",
+            "label": "Enercon E126 4200"
+          },
+          {
+            "value": "Enercon E126 6500",
+            "label": "Enercon E126 6500"
+          },
+          {
+            "value": "Enercon E126 7000",
+            "label": "Enercon E126 7000"
+          },
+          {
+            "value": "Enercon E126 7500",
+            "label": "Enercon E126 7500"
+          },
+          {
+            "value": "Enercon E138 3500",
+            "label": "Enercon E138 3500"
+          },
+          {
+            "value": "Enercon E138 4260",
+            "label": "Enercon E138 4260"
+          },
+          {
+            "value": "Enercon E141 4200",
+            "label": "Enercon E141 4200"
+          },
+          {
+            "value": "Enercon E160 4600",
+            "label": "Enercon E160 4600"
+          },
+          {
+            "value": "Enercon E160 5560",
+            "label": "Enercon E160 5560"
+          },
+          {
+            "value": "Enercon E175 6000",
+            "label": "Enercon E175 6000"
+          },
+          {
+            "value": "Enercon E40 500",
+            "label": "Enercon E40 500"
+          },
+          {
+            "value": "Enercon E40 600",
+            "label": "Enercon E40 600"
+          },
+          {
+            "value": "Enercon E44 900",
+            "label": "Enercon E44 900"
+          },
+          {
+            "value": "Enercon E48 800",
+            "label": "Enercon E48 800"
+          },
+          {
+            "value": "Enercon E53 800",
+            "label": "Enercon E53 800"
+          },
+          {
+            "value": "Enercon E66 1500",
+            "label": "Enercon E66 1500"
+          },
+          {
+            "value": "Enercon E66 1800",
+            "label": "Enercon E66 1800"
+          },
+          {
+            "value": "Enercon E66 2000",
+            "label": "Enercon E66 2000"
+          },
+          {
+            "value": "Enercon E70 2000",
+            "label": "Enercon E70 2000"
+          },
+          {
+            "value": "Enercon E70 2300",
+            "label": "Enercon E70 2300"
+          },
+          {
+            "value": "Enercon E82 1800",
+            "label": "Enercon E82 1800"
+          },
+          {
+            "value": "Enercon E82 2000",
+            "label": "Enercon E82 2000"
+          },
+          {
+            "value": "Enercon E82 2300",
+            "label": "Enercon E82 2300"
+          },
+          {
+            "value": "Enercon E82 3000",
+            "label": "Enercon E82 3000"
+          },
+          {
+            "value": "Enercon E92 2300",
+            "label": "Enercon E92 2300"
+          },
+          {
+            "value": "Enercon E92 2350",
+            "label": "Enercon E92 2350"
+          },
+          {
+            "value": "EWT DirectWind 52 900",
+            "label": "EWT DirectWind 52 900"
+          },
+          {
+            "value": "Gamesa G114 2000",
+            "label": "Gamesa G114 2000"
+          },
+          {
+            "value": "Gamesa G114 2100",
+            "label": "Gamesa G114 2100"
+          },
+          {
+            "value": "Gamesa G114 2500",
+            "label": "Gamesa G114 2500"
+          },
+          {
+            "value": "Gamesa G114 2625",
+            "label": "Gamesa G114 2625"
+          },
+          {
+            "value": "Gamesa G128 4500",
+            "label": "Gamesa G128 4500"
+          },
+          {
+            "value": "Gamesa G128 5000",
+            "label": "Gamesa G128 5000"
+          },
+          {
+            "value": "Gamesa G47 660",
+            "label": "Gamesa G47 660"
+          },
+          {
+            "value": "Gamesa G52 850",
+            "label": "Gamesa G52 850"
+          },
+          {
+            "value": "Gamesa G58 850",
+            "label": "Gamesa G58 850"
+          },
+          {
+            "value": "Gamesa G80 2000",
+            "label": "Gamesa G80 2000"
+          },
+          {
+            "value": "Gamesa G87 2000",
+            "label": "Gamesa G87 2000"
+          },
+          {
+            "value": "Gamesa G90 2000",
+            "label": "Gamesa G90 2000"
+          },
+          {
+            "value": "Gamesa G97 2000",
+            "label": "Gamesa G97 2000"
+          },
+          {
+            "value": "GE 1.5s",
+            "label": "GE 1.5s"
+          },
+          {
+            "value": "GE 1.5se",
+            "label": "GE 1.5se"
+          },
+          {
+            "value": "GE 1.5sl",
+            "label": "GE 1.5sl"
+          },
+          {
+            "value": "GE 1.5sle",
+            "label": "GE 1.5sle"
+          },
+          {
+            "value": "GE 1.5xle",
+            "label": "GE 1.5xle"
+          },
+          {
+            "value": "GE 1.6",
+            "label": "GE 1.6"
+          },
+          {
+            "value": "GE 1.6-82.5",
+            "label": "GE 1.6-82.5"
+          },
+          {
+            "value": "GE 1.7",
+            "label": "GE 1.7"
+          },
+          {
+            "value": "GE 1.85-82.5",
+            "label": "GE 1.85-82.5"
+          },
+          {
+            "value": "GE 1.85-87",
+            "label": "GE 1.85-87"
+          },
+          {
+            "value": "GE 2.5-100",
+            "label": "GE 2.5-100"
+          },
+          {
+            "value": "GE 2.5-103",
+            "label": "GE 2.5-103"
+          },
+          {
+            "value": "GE 2.5-120",
+            "label": "GE 2.5-120"
+          },
+          {
+            "value": "GE 2.5-88",
+            "label": "GE 2.5-88"
+          },
+          {
+            "value": "GE 2.5xl",
+            "label": "GE 2.5xl"
+          },
+          {
+            "value": "GE 2.75-103",
+            "label": "GE 2.75-103"
+          },
+          {
+            "value": "GE 2.75-120",
+            "label": "GE 2.75-120"
+          },
+          {
+            "value": "GE 2.85-103",
+            "label": "GE 2.85-103"
+          },
+          {
+            "value": "GE 3.2-103",
+            "label": "GE 3.2-103"
+          },
+          {
+            "value": "GE 3.2-130",
+            "label": "GE 3.2-130"
+          },
+          {
+            "value": "GE 3.4-130",
+            "label": "GE 3.4-130"
+          },
+          {
+            "value": "GE 3.4-137",
+            "label": "GE 3.4-137"
+          },
+          {
+            "value": "GE 3.6sl",
+            "label": "GE 3.6sl"
+          },
+          {
+            "value": "GE 3.8-130",
+            "label": "GE 3.8-130"
+          },
+          {
+            "value": "GE 5.3-158",
+            "label": "GE 5.3-158"
+          },
+          {
+            "value": "GE 5.5-158",
+            "label": "GE 5.5-158"
+          },
+          {
+            "value": "GE 6.0-164",
+            "label": "GE 6.0-164"
+          },
+          {
+            "value": "GE 900S",
+            "label": "GE 900S"
+          },
+          {
+            "value": "GE Haliade 6-150",
+            "label": "GE Haliade 6-150"
+          },
+          {
+            "value": "GE Haliade-X 12-220",
+            "label": "GE Haliade-X 12-220"
+          },
+          {
+            "value": "Goldwind GW109 2500",
+            "label": "Goldwind GW109 2500"
+          },
+          {
+            "value": "Goldwind GW121 2500",
+            "label": "Goldwind GW121 2500"
+          },
+          {
+            "value": "Goldwind GW140 3400",
+            "label": "Goldwind GW140 3400"
+          },
+          {
+            "value": "Goldwind GW140 3000",
+            "label": "Goldwind GW140 3000"
+          },
+          {
+            "value": "Goldwind GW154 6700",
+            "label": "Goldwind GW154 6700"
+          },
+          {
+            "value": "Goldwind GW82 1500",
+            "label": "Goldwind GW82 1500"
+          },
+          {
+            "value": "Hitachi HTW5.2-127",
+            "label": "Hitachi HTW5.2-127"
+          },
+          {
+            "value": "Hitachi HTW5.2-136",
+            "label": "Hitachi HTW5.2-136"
+          },
+          {
+            "value": "MHI Vestas V117 4200",
+            "label": "MHI Vestas V117 4200"
+          },
+          {
+            "value": "MHI Vestas V164 10000",
+            "label": "MHI Vestas V164 10000"
+          },
+          {
+            "value": "MHI Vestas V164 8400",
+            "label": "MHI Vestas V164 8400"
+          },
+          {
+            "value": "MHI Vestas V164 9500",
+            "label": "MHI Vestas V164 9500"
+          },
+          {
+            "value": "MHI Vestas V174 9500",
+            "label": "MHI Vestas V174 9500"
+          },
+          {
+            "value": "Mingyang SCD 3000 100",
+            "label": "Mingyang SCD 3000 100"
+          },
+          {
+            "value": "Mingyang SCD 3000 108",
+            "label": "Mingyang SCD 3000 108"
+          },
+          {
+            "value": "Mingyang SCD 3000 92",
+            "label": "Mingyang SCD 3000 92"
+          },
+          {
+            "value": "NEG Micon M1500 500",
+            "label": "NEG Micon M1500 500"
+          },
+          {
+            "value": "NEG Micon M1500 750",
+            "label": "NEG Micon M1500 750"
+          },
+          {
+            "value": "NEG Micon NM48 750",
+            "label": "NEG Micon NM48 750"
+          },
+          {
+            "value": "NEG Micon NM52 900",
+            "label": "NEG Micon NM52 900"
+          },
+          {
+            "value": "NEG Micon NM60 1000",
+            "label": "NEG Micon NM60 1000"
+          },
+          {
+            "value": "NEG Micon NM64c 1500",
+            "label": "NEG Micon NM64c 1500"
+          },
+          {
+            "value": "NEG Micon NM80 2750",
+            "label": "NEG Micon NM80 2750"
+          },
+          {
+            "value": "Nordex N100 2500",
+            "label": "Nordex N100 2500"
+          },
+          {
+            "value": "Nordex N100 3300",
+            "label": "Nordex N100 3300"
+          },
+          {
+            "value": "Nordex N117 2400",
+            "label": "Nordex N117 2400"
+          },
+          {
+            "value": "Nordex N117 3000",
+            "label": "Nordex N117 3000"
+          },
+          {
+            "value": "Nordex N117 3600",
+            "label": "Nordex N117 3600"
+          },
+          {
+            "value": "Nordex N131 3000",
+            "label": "Nordex N131 3000"
+          },
+          {
+            "value": "Nordex N131 3300",
+            "label": "Nordex N131 3300"
+          },
+          {
+            "value": "Nordex N131 3600",
+            "label": "Nordex N131 3600"
+          },
+          {
+            "value": "Nordex N131 3900",
+            "label": "Nordex N131 3900"
+          },
+          {
+            "value": "Nordex N149 4500",
+            "label": "Nordex N149 4500"
+          },
+          {
+            "value": "Nordex N27 150",
+            "label": "Nordex N27 150"
+          },
+          {
+            "value": "Nordex N29 250",
+            "label": "Nordex N29 250"
+          },
+          {
+            "value": "Nordex N43 600",
+            "label": "Nordex N43 600"
+          },
+          {
+            "value": "Nordex N50 800",
+            "label": "Nordex N50 800"
+          },
+          {
+            "value": "Nordex N60 1300",
+            "label": "Nordex N60 1300"
+          },
+          {
+            "value": "Nordex N80 2500",
+            "label": "Nordex N80 2500"
+          },
+          {
+            "value": "Nordex N90 2300",
+            "label": "Nordex N90 2300"
+          },
+          {
+            "value": "Nordex N90 2500",
+            "label": "Nordex N90 2500"
+          },
+          {
+            "value": "Nordtank NTK500",
+            "label": "Nordtank NTK500"
+          },
+          {
+            "value": "Nordtank NTK600",
+            "label": "Nordtank NTK600"
+          },
+          {
+            "value": "PowerWind 56 900",
+            "label": "PowerWind 56 900"
+          },
+          {
+            "value": "REpower 3.4M",
+            "label": "REpower 3.4M"
+          },
+          {
+            "value": "REpower 5M",
+            "label": "REpower 5M"
+          },
+          {
+            "value": "REpower 6M",
+            "label": "REpower 6M"
+          },
+          {
+            "value": "REpower MD70 1500",
+            "label": "REpower MD70 1500"
+          },
+          {
+            "value": "REPower MD77 1500",
+            "label": "REPower MD77 1500"
+          },
+          {
+            "value": "REpower MM70 2000",
+            "label": "REpower MM70 2000"
+          },
+          {
+            "value": "REpower MM82 2000",
+            "label": "REpower MM82 2000"
+          },
+          {
+            "value": "REpower MM92 2000",
+            "label": "REpower MM92 2000"
+          },
+          {
+            "value": "Senvion 3.2M114",
+            "label": "Senvion 3.2M114"
+          },
+          {
+            "value": "Senvion 6.3M152",
+            "label": "Senvion 6.3M152"
+          },
+          {
+            "value": "Senvion MM82 2050",
+            "label": "Senvion MM82 2050"
+          },
+          {
+            "value": "Senvion MM92 2050",
+            "label": "Senvion MM92 2050"
+          },
+          {
+            "value": "Shanghai Electric W2000 105",
+            "label": "Shanghai Electric W2000 105"
+          },
+          {
+            "value": "Shanghai Electric W2000 111",
+            "label": "Shanghai Electric W2000 111"
+          },
+          {
+            "value": "Shanghai Electric W2000 116",
+            "label": "Shanghai Electric W2000 116"
+          },
+          {
+            "value": "Shanghai Electric W2000 87",
+            "label": "Shanghai Electric W2000 87"
+          },
+          {
+            "value": "Shanghai Electric W2000 93",
+            "label": "Shanghai Electric W2000 93"
+          },
+          {
+            "value": "Shanghai Electric W2000 99",
+            "label": "Shanghai Electric W2000 99"
+          },
+          {
+            "value": "Shanghai Electric W3600 116",
+            "label": "Shanghai Electric W3600 116"
+          },
+          {
+            "value": "Shanghai Electric W3600 122",
+            "label": "Shanghai Electric W3600 122"
+          },
+          {
+            "value": "Siemens Gamesa SG 10.0-193",
+            "label": "Siemens Gamesa SG 10.0-193"
+          },
+          {
+            "value": "Siemens Gamesa SG 4.5-145",
+            "label": "Siemens Gamesa SG 4.5-145"
+          },
+          {
+            "value": "Siemens Gamesa SG 5.0-132",
+            "label": "Siemens Gamesa SG 5.0-132"
+          },
+          {
+            "value": "Siemens Gamesa SG 5.0-145",
+            "label": "Siemens Gamesa SG 5.0-145"
+          },
+          {
+            "value": "Siemens Gamesa SG 6.0-154",
+            "label": "Siemens Gamesa SG 6.0-154"
+          },
+          {
+            "value": "Siemens Gamesa SG 6.2-170",
+            "label": "Siemens Gamesa SG 6.2-170"
+          },
+          {
+            "value": "Siemens Gamesa SG 6.6-155",
+            "label": "Siemens Gamesa SG 6.6-155"
+          },
+          {
+            "value": "Siemens Gamesa SG 6.6-170",
+            "label": "Siemens Gamesa SG 6.6-170"
+          },
+          {
+            "value": "Siemens Gamesa SG 7.0-154",
+            "label": "Siemens Gamesa SG 7.0-154"
+          },
+          {
+            "value": "Siemens Gamesa SG 8.0-167",
+            "label": "Siemens Gamesa SG 8.0-167"
+          },
+          {
+            "value": "Siemens Gamesa SG 8.5-167",
+            "label": "Siemens Gamesa SG 8.5-167"
+          },
+          {
+            "value": "Siemens SWT-1.3-62",
+            "label": "Siemens SWT-1.3-62"
+          },
+          {
+            "value": "Siemens SWT-2.3-101",
+            "label": "Siemens SWT-2.3-101"
+          },
+          {
+            "value": "Siemens SWT-2.3-108",
+            "label": "Siemens SWT-2.3-108"
+          },
+          {
+            "value": "Siemens SWT-2.3-82",
+            "label": "Siemens SWT-2.3-82"
+          },
+          {
+            "value": "Siemens SWT-2.3-93",
+            "label": "Siemens SWT-2.3-93"
+          },
+          {
+            "value": "Siemens SWT-2.5-108",
+            "label": "Siemens SWT-2.5-108"
+          },
+          {
+            "value": "Siemens SWT-2.625-120",
+            "label": "Siemens SWT-2.625-120"
+          },
+          {
+            "value": "Siemens SWT-3.0-101",
+            "label": "Siemens SWT-3.0-101"
+          },
+          {
+            "value": "Siemens SWT-3.15-142",
+            "label": "Siemens SWT-3.15-142"
+          },
+          {
+            "value": "Siemens SWT-3.2-101",
+            "label": "Siemens SWT-3.2-101"
+          },
+          {
+            "value": "Siemens SWT-3.2-108",
+            "label": "Siemens SWT-3.2-108"
+          },
+          {
+            "value": "Siemens SWT-3.2-113",
+            "label": "Siemens SWT-3.2-113"
+          },
+          {
+            "value": "Siemens SWT-3.3-130",
+            "label": "Siemens SWT-3.3-130"
+          },
+          {
+            "value": "Siemens SWT-3.6-107",
+            "label": "Siemens SWT-3.6-107"
+          },
+          {
+            "value": "Siemens SWT-3.6-120",
+            "label": "Siemens SWT-3.6-120"
+          },
+          {
+            "value": "Siemens SWT-3.6-130",
+            "label": "Siemens SWT-3.6-130"
+          },
+          {
+            "value": "Siemens SWT-4.0-120",
+            "label": "Siemens SWT-4.0-120"
+          },
+          {
+            "value": "Siemens SWT-4.0-130",
+            "label": "Siemens SWT-4.0-130"
+          },
+          {
+            "value": "Siemens SWT-4.1-142",
+            "label": "Siemens SWT-4.1-142"
+          },
+          {
+            "value": "Siemens SWT-4.3-120",
+            "label": "Siemens SWT-4.3-120"
+          },
+          {
+            "value": "Siemens SWT-4.3-130",
+            "label": "Siemens SWT-4.3-130"
+          },
+          {
+            "value": "Siemens SWT-6.0-154",
+            "label": "Siemens SWT-6.0-154"
+          },
+          {
+            "value": "Siemens SWT-7.0-154",
+            "label": "Siemens SWT-7.0-154"
+          },
+          {
+            "value": "Siemens SWT-8.0-154",
+            "label": "Siemens SWT-8.0-154"
+          },
+          {
+            "value": "Suzlon S88 2100",
+            "label": "Suzlon S88 2100"
+          },
+          {
+            "value": "Suzlon S97 2100",
+            "label": "Suzlon S97 2100"
+          },
+          {
+            "value": "Tacke TW600 43",
+            "label": "Tacke TW600 43"
+          },
+          {
+            "value": "Vestas V100 1800",
+            "label": "Vestas V100 1800"
+          },
+          {
+            "value": "Vestas V100 2000",
+            "label": "Vestas V100 2000"
+          },
+          {
+            "value": "Vestas V100 2600",
+            "label": "Vestas V100 2600"
+          },
+          {
+            "value": "Vestas V105 3300",
+            "label": "Vestas V105 3300"
+          },
+          {
+            "value": "Vestas V105 3450",
+            "label": "Vestas V105 3450"
+          },
+          {
+            "value": "Vestas V110 2000",
+            "label": "Vestas V110 2000"
+          },
+          {
+            "value": "Vestas V112 3000",
+            "label": "Vestas V112 3000"
+          },
+          {
+            "value": "Vestas V112 3300",
+            "label": "Vestas V112 3300"
+          },
+          {
+            "value": "Vestas V112 3450",
+            "label": "Vestas V112 3450"
+          },
+          {
+            "value": "Vestas V117 3300",
+            "label": "Vestas V117 3300"
+          },
+          {
+            "value": "Vestas V117 3450",
+            "label": "Vestas V117 3450"
+          },
+          {
+            "value": "Vestas V117 3600",
+            "label": "Vestas V117 3600"
+          },
+          {
+            "value": "Vestas V117 4000",
+            "label": "Vestas V117 4000"
+          },
+          {
+            "value": "Vestas V120 2200",
+            "label": "Vestas V120 2200"
+          },
+          {
+            "value": "Vestas V126 3000",
+            "label": "Vestas V126 3000"
+          },
+          {
+            "value": "Vestas V126 3300",
+            "label": "Vestas V126 3300"
+          },
+          {
+            "value": "Vestas V126 3450",
+            "label": "Vestas V126 3450"
+          },
+          {
+            "value": "Vestas V136 3450",
+            "label": "Vestas V136 3450"
+          },
+          {
+            "value": "Vestas V136 4000",
+            "label": "Vestas V136 4000"
+          },
+          {
+            "value": "Vestas V150 4000",
+            "label": "Vestas V150 4000"
+          },
+          {
+            "value": "Vestas V150 4200",
+            "label": "Vestas V150 4200"
+          },
+          {
+            "value": "Vestas V150 4500",
+            "label": "Vestas V150 4500"
+          },
+          {
+            "value": "Vestas V150 5600",
+            "label": "Vestas V150 5600"
+          },
+          {
+            "value": "Vestas V150 6000",
+            "label": "Vestas V150 6000"
+          },
+          {
+            "value": "Vestas V162 5600",
+            "label": "Vestas V162 5600"
+          },
+          {
+            "value": "Vestas V162 6000",
+            "label": "Vestas V162 6000"
+          },
+          {
+            "value": "Vestas V162 6200",
+            "label": "Vestas V162 6200"
+          },
+          {
+            "value": "Vestas V162 7200",
+            "label": "Vestas V162 7200"
+          },
+          {
+            "value": "Vestas V164 7000",
+            "label": "Vestas V164 7000"
+          },
+          {
+            "value": "Vestas V164 8000",
+            "label": "Vestas V164 8000"
+          },
+          {
+            "value": "Vestas V164 9500",
+            "label": "Vestas V164 9500"
+          },
+          {
+            "value": "Vestas V172 7200",
+            "label": "Vestas V172 7200"
+          },
+          {
+            "value": "Vestas V27 225",
+            "label": "Vestas V27 225"
+          },
+          {
+            "value": "Vestas V29 225",
+            "label": "Vestas V29 225"
+          },
+          {
+            "value": "Vestas V39 500",
+            "label": "Vestas V39 500"
+          },
+          {
+            "value": "Vestas V42 600",
+            "label": "Vestas V42 600"
+          },
+          {
+            "value": "Vestas V44 600",
+            "label": "Vestas V44 600"
+          },
+          {
+            "value": "Vestas V47 660",
+            "label": "Vestas V47 660"
+          },
+          {
+            "value": "Vestas V52 850",
+            "label": "Vestas V52 850"
+          },
+          {
+            "value": "Vestas V66 1650",
+            "label": "Vestas V66 1650"
+          },
+          {
+            "value": "Vestas V66 1750",
+            "label": "Vestas V66 1750"
+          },
+          {
+            "value": "Vestas V66 2000",
+            "label": "Vestas V66 2000"
+          },
+          {
+            "value": "Vestas V80 1800",
+            "label": "Vestas V80 1800"
+          },
+          {
+            "value": "Vestas V80 2000",
+            "label": "Vestas V80 2000"
+          },
+          {
+            "value": "Vestas V82 1650",
+            "label": "Vestas V82 1650"
+          },
+          {
+            "value": "Vestas V90 1800",
+            "label": "Vestas V90 1800"
+          },
+          {
+            "value": "Vestas V90 2000",
+            "label": "Vestas V90 2000"
+          },
+          {
+            "value": "Vestas V90 3000",
+            "label": "Vestas V90 3000"
+          },
+          {
+            "value": "Wind World W3700",
+            "label": "Wind World W3700"
+          },
+          {
+            "value": "Wind World W4200",
+            "label": "Wind World W4200"
+          },
+          {
+            "value": "Windflow 33 500",
+            "label": "Windflow 33 500"
+          },
+          {
+            "value": "Windmaster WM28 300",
+            "label": "Windmaster WM28 300"
+          },
+          {
+            "value": "Windmaster WM43 750",
+            "label": "Windmaster WM43 750"
+          },
+          {
+            "value": "XANT M21 100",
+            "label": "XANT M21 100"
+          },
+          {
+            "value": "Dewind D6 1000",
+            "label": "Dewind D6 1000"
+          },
+          {
+            "value": "Windflow 500",
+            "label": "Windflow 500"
+          },
+          {
+            "value": "GE 2.75 103",
+            "label": "GE 2.75 103"
+          },
+          {
+            "value": "GE 3.4 130",
+            "label": "GE 3.4 130"
+          },
+          {
+            "value": "GE 3.2 103",
+            "label": "GE 3.2 103"
+          },
+          {
+            "value": "GE 3.2 130",
+            "label": "GE 3.2 130"
+          },
+          {
+            "value": "GE 3.8 130",
+            "label": "GE 3.8 130"
+          },
+          {
+            "value": "Siemens SWT 1.3 62",
+            "label": "Siemens SWT 1.3 62"
+          },
+          {
+            "value": "Siemens SWT 2.3 82",
+            "label": "Siemens SWT 2.3 82"
+          },
+          {
+            "value": "Siemens SWT 2.3 93",
+            "label": "Siemens SWT 2.3 93"
+          },
+          {
+            "value": "Siemens SWT 2.3 101",
+            "label": "Siemens SWT 2.3 101"
+          },
+          {
+            "value": "Siemens SWT 3.0 101",
+            "label": "Siemens SWT 3.0 101"
+          },
+          {
+            "value": "Siemens SWT 3.6 107",
+            "label": "Siemens SWT 3.6 107"
+          },
+          {
+            "value": "Siemens SWT 3.6 120",
+            "label": "Siemens SWT 3.6 120"
+          },
+          {
+            "value": "Siemens SWT 3.6 130",
+            "label": "Siemens SWT 3.6 130"
+          },
+          {
+            "value": "Siemens SWT 4.0 130",
+            "label": "Siemens SWT 4.0 130"
+          },
+          {
+            "value": "Siemens SWT 4.3 130",
+            "label": "Siemens SWT 4.3 130"
+          },
+          {
+            "value": "Siemens SWT 4.1 142",
+            "label": "Siemens SWT 4.1 142"
+          },
+          {
+            "value": "Siemens Gamesa SG 4.5 145",
+            "label": "Siemens Gamesa SG 4.5 145"
+          },
+          {
+            "value": "GE 5.5 158",
+            "label": "GE 5.5 158"
+          },
+          {
+            "value": "GE 5.3 158",
+            "label": "GE 5.3 158"
+          }
+        ],
+        "default": "Vestas V90 2000"
+      },
+      {
+        "id": "raw",
+        "name": "Include raw data",
+        "help": "Tick this box to include additional columns with the underlying weather data used in the model, rather than just the model output itself. Raw weather data is included in the downloadable output file but not visualized in the web application.",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "id": "demand",
+    "name": "Heating & cooling demand",
+    "default_dataset": "merra2",
+    "datasets": [
+      {
+        "id": "merra2",
+        "name": "MERRA-2 (global)",
+        "daterange": [
+          "2019-01-01",
+          "2019-12-31"
+        ],
+        "bounds": [
+          90,
+          -180,
+          -90,
+          180
+        ]
+      }
+    ],
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "license_name": "Creative Commons Attribution-NonCommercial",
+    "citation_url": "https://doi.org/10.1038/s41560-023-01341-5",
+    "citation_name": "Staffell et al. (2023)",
+    "max_daterange": "P1Y",
+    "version": 1.0,
+    "fields": [
+      {
+        "id": "heating_threshold",
+        "name": "Heating threshold (\u00b0C)",
+        "help": "Temperature below which heating is required. Context: 11 to 17 degrees is the typical range seen across OECD countries.",
+        "type": "float",
+        "min": -50,
+        "max": 50,
+        "default": 14,
+        "optional": true
+      },
+      {
+        "id": "cooling_threshold",
+        "name": "Cooling threshold (\u00b0C)",
+        "help": "Temperature above which cooling is required. Context: 17 to 23 degrees is the typical range seen across OECD countries.",
+        "type": "float",
+        "min": -50,
+        "max": 50,
+        "default": 20,
+        "optional": true
+      },
+      {
+        "id": "base_power",
+        "name": "Base power (kW)",
+        "help": "The base level of demand when it is neither hot nor cold. Context: if simulating electricity or gas demand, this value represents 'other' uses that do not depend on outdoor temperature (e.g. cooking, water heating, lighting, appliances).",
+        "type": "float",
+        "min": 0,
+        "default": 0,
+        "optional": true
+      },
+      {
+        "id": "heating_power",
+        "name": "Heating power (kW/\u00b0C)",
+        "help": "The additional demand for heat as temperature falls below the heating threshold. This will scale with building size, its thermal performance, heating system efficiency, etc. Context: 25 W/\u00b0C is a typical value per person for electricity demand, and 100 W/\u00b0C per person is typical for gas demand.",
+        "type": "float",
+        "min": 0,
+        "default": 0.3,
+        "optional": true
+      },
+      {
+        "id": "cooling_power",
+        "name": "Cooling power (kW/\u00b0C)",
+        "help": "The additional demand for cool as temperature rises above the cooling threshold. This will scale with building size, its thermal performance, HVAC efficiency, etc. Context: 50 W/\u00b0C is a typical value per person for electricity demand.",
+        "type": "float",
+        "min": 0,
+        "default": 0.15,
+        "optional": true
+      },
+      {
+        "id": "smoothing",
+        "name": "Smoothing (days\u207b\u00b9)",
+        "help": "This represents the building's thermal inertia: the influence that temperatures on the previous two days have on the current temperature index. Higher values imply heavier construction and better insulation. Context: 0.20 to 0.80 is the typical range seen across OECD countries.",
+        "type": "float",
+        "min": 0,
+        "max": 1,
+        "default": 0.5,
+        "optional": true
+      },
+      {
+        "id": "solar_gains",
+        "name": "Solar gains (\u00b0C per W/m\u00b2)",
+        "help": "This represents solar gains in the building: the influence that greater sunshine has on increasing perceived temperature. Higher values imply larger windows allowing sunlight in. Context: 0.004 to 0.020 is the typical range seen across OECD countries.",
+        "type": "float",
+        "min": 0,
+        "max": 0.1,
+        "default": 0.012,
+        "optional": true
+      },
+      {
+        "id": "wind_chill",
+        "name": "Wind chill (\u00b0C per m/s)",
+        "help": "This represents wind chill in the building: the influence that greater wind speed has on reducing perceived temperature. Larger (more negative) values imply lower air tightness (more leaky). Context: -0.05 to -0.35 is the typical range seen across OECD countries.",
+        "type": "float",
+        "min": -1.5,
+        "max": 0,
+        "default": -0.2,
+        "optional": true
+      },
+      {
+        "id": "humidity_discomfort",
+        "name": "Humidity discomfort (\u00b0C per g/kg)",
+        "help": "This represents the added discomfort from humidity: the influence that greater humidity has on moving perceived temperature further from the desired level. Larger values imply greater discomfort during humid weather. Context: 0.00 to 0.10 is the typical range seen across OECD countries.",
+        "type": "float",
+        "min": 0,
+        "max": 0.5,
+        "default": 0.05,
+        "optional": true
+      },
+      {
+        "id": "use_diurnal_profile",
+        "name": "Use diurnal profile",
+        "help": "Should we use our global average empirical profile for the diurnal demand when upsampling from daily to hourly (i.e. when in the day people heat & cool)?",
+        "type": "boolean",
+        "default": true,
+        "optional": true
+      }
+    ]
+  },
+  {
+    "id": "weather",
+    "name": "Weather",
+    "default_dataset": "merra2",
+    "datasets": [
+      {
+        "id": "merra2",
+        "name": "MERRA-2 (global)",
+        "daterange": [
+          "2019-01-01",
+          "2019-12-31"
+        ],
+        "bounds": [
+          80,
+          -180,
+          -80,
+          180
+        ]
+      }
+    ],
+    "license_url": "https://science.nasa.gov/earth-science/earth-science-data/data-information-policy",
+    "license_name": "NASA Data Information Policy",
+    "citation_url": "https://www.renewables.ninja/",
+    "citation_name": "www.renewables.ninja and Gelaro et al. (2017), doi: 10.1175/JCLI-D-16-0758.1",
+    "max_daterange": "P1Y",
+    "version": 1.0,
+    "fields": [
+      {
+        "id": "var_t2m",
+        "name": "Air temperature (\u00b0C)",
+        "help": "Air temperature at 2 meters above ground. T2M variable in MERRA-2, converted from K.",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "id": "var_prectotland",
+        "name": "Precipitation (mm / hour)",
+        "help": "Total bias-corrected precipitation, over land only. PRECTOTLAND variable in MERRA-2, converted from kg m\u207b\u00b2 s\u207b\u00b9",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "id": "var_precsnoland",
+        "name": "Snowfall (mm / hour)",
+        "help": "Total bias-corrected precipitation in the form of snow, over land only. PRECSNOLAND variable in MERRA-2, converted from kg m\u207b\u00b2 s\u207b\u00b9",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "id": "var_snomas",
+        "name": "Snow mass (kg / m\u00b2)",
+        "help": "Amount of snow per land area. SNOMAS variable in MERRA-2, in native units.",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "id": "var_rhoa",
+        "name": "Air density (kg / m\u00b3)",
+        "help": "Air density at ground level. RHOA variable in MERRA-2, in native units.",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "id": "var_swgdn",
+        "name": "Ground-level solar irradiance (W / m\u00b2)",
+        "help": "Surface-level incident shortwave radiation flux, considering cloud cover and aerosols. SWGDN variable in MERRA-2, in native units. Note, MERRA-2 uses the mean annual climate for aerosols, rather than time-varying quantity.",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "id": "var_swtdn",
+        "name": "Top of atmosphere solar irradiance (W / m\u00b2)",
+        "help": "Top of atmosphere incident shortwave radiation flux, before cloud cover and aerosol influences. SWTDN variable in MERRA-2, in native units.",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      },
+      {
+        "id": "var_cldtot",
+        "name": "Cloud cover fraction",
+        "help": "Fraction of cloud cover, averaged over grid cell and summed over all height above ground. CLDTOT variable in MERRA-2, in native units (a [0, 1] scale).",
+        "type": "boolean",
+        "default": false,
+        "optional": true
+      }
+    ]
+  }
+]

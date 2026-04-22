@@ -1,0 +1,7 @@
+test_id,wind_mw,pv_mw,storage_mwh,backup_limit_pct,why_test_next
+A_plus_pv,40,110,450,5.0,Test whether a small PV increase cuts backup without a large cost penalty.
+A_plus_storage,40,100,600,5.0,Check whether moderate extra storage reduces backup and overproduction together.
+A_tighter_backup,40,100,600,4.0,See how close the current best shape can get to a stricter backup target.
+A_more_wind,45,95,450,5.0,Probe whether a slightly wind-heavier mix improves shoulder-season balance.
+C_plus_storage,30,125,600,5.0,Improve the lower-backup Scenario C with more storage to compare against A.
+hybrid_A_C,35,110,500,5.0,Blend A and C to test whether backup can fall further while staying near A's cost.

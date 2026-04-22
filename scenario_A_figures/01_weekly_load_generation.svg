@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect x="0" y="0" width="1200" height="720" fill="#f8fafc"/>
+<text x="50" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">Scenario A: Weekly Average Load and Generation</text>
+<text x="90" y="80" font-family="Arial, sans-serif" font-size="16" fill="#475569">Scenario A in workbook: 40 MW wind, 100 MW PV, 450 MWh storage, 5% backup limit. LCOE-like metric = 0.0929 EUR/kWh.</text>
+<line x1="90" y1="600" x2="1110" y2="600" stroke="#94a3b8" stroke-width="2"/>
+<line x1="90" y1="100" x2="90" y2="600" stroke="#94a3b8" stroke-width="2"/>
+<text x="30" y="350" transform="rotate(-90 30 350)" font-family="Arial, sans-serif" font-size="15" fill="#334155">MW</text>
+<line x1="90" y1="600.00" x2="1110" y2="600.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="605.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">0.0</text>
+<line x1="90" y1="500.00" x2="1110" y2="500.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="505.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">8.4</text>
+<line x1="90" y1="400.00" x2="1110" y2="400.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="405.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">16.7</text>
+<line x1="90" y1="300.00" x2="1110" y2="300.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="305.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">25.1</text>
+<line x1="90" y1="200.00" x2="1110" y2="200.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="205.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">33.4</text>
+<line x1="90" y1="100.00" x2="1110" y2="100.00" stroke="#e2e8f0" stroke-width="1"/>
+<text x="78" y="105.00" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#475569">41.8</text>
+<line x1="90.00" y1="600" x2="90.00" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="90.00" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569">Jan</text>
+<line x1="168.46" y1="600" x2="168.46" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="168.46" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="246.92" y1="600" x2="246.92" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="246.92" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="325.38" y1="600" x2="325.38" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="325.38" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="403.85" y1="600" x2="403.85" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="403.85" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="482.31" y1="600" x2="482.31" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="482.31" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="560.77" y1="600" x2="560.77" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="560.77" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="639.23" y1="600" x2="639.23" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="639.23" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="717.69" y1="600" x2="717.69" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="717.69" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="796.15" y1="600" x2="796.15" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="796.15" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="874.62" y1="600" x2="874.62" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="874.62" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<line x1="953.08" y1="600" x2="953.08" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="953.08" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569">Nov</text>
+<line x1="1031.54" y1="600" x2="1031.54" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="1031.54" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569">Dec</text>
+<line x1="1110.00" y1="600" x2="1110.00" y2="606" stroke="#94a3b8" stroke-width="1"/>
+<text x="1110.00" y="624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#475569"></text>
+<polyline fill="none" stroke="#0f172a" stroke-width="3" points="90.00,207.25 109.62,161.94 129.23,155.42 148.85,160.43 168.46,172.77 188.08,152.89 207.69,186.50 227.31,164.46 246.92,167.42 266.54,140.19 286.15,147.67 305.77,156.90 325.38,167.94 345.00,141.77 364.62,129.26 384.23,137.53 403.85,124.88 423.46,114.51 443.08,100.00 462.69,111.78 482.31,113.54 501.92,115.47 521.54,101.38 541.15,114.69 560.77,122.88 580.38,123.24 600.00,118.42 619.62,151.64 639.23,147.21 658.85,162.96 678.46,165.13 698.08,187.49 717.69,196.45 737.31,205.75 756.92,204.39 776.54,200.72 796.15,213.73 815.77,213.71 835.38,217.17 855.00,216.87 874.62,208.64 894.23,209.82 913.85,207.08 933.46,183.45 953.08,173.96 972.69,173.96 992.31,188.29 1011.92,172.69 1031.54,183.35 1051.15,173.89 1070.77,178.80 1090.38,138.41 1110.00,136.87"/>
+<line x1="110" y1="680" x2="138" y2="680" stroke="#0f172a" stroke-width="4"/>
+<text x="146" y="685" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">Load</text>
+<polyline fill="none" stroke="#0ea5e9" stroke-width="3" points="90.00,376.54 109.62,173.27 129.23,187.40 148.85,179.92 168.46,351.80 188.08,158.18 207.69,193.49 227.31,146.86 246.92,171.13 266.54,197.36 286.15,265.15 305.77,287.94 325.38,407.77 345.00,417.36 364.62,241.18 384.23,363.49 403.85,191.16 423.46,286.18 443.08,274.45 462.69,324.33 482.31,202.15 501.92,217.01 521.54,269.77 541.15,462.33 560.77,388.06 580.38,390.10 600.00,444.16 619.62,422.73 639.23,499.18 658.85,439.57 678.46,419.32 698.08,545.71 717.69,498.30 737.31,424.14 756.92,514.17 776.54,441.87 796.15,432.74 815.77,405.89 835.38,438.82 855.00,361.75 874.62,560.32 894.23,513.54 913.85,417.89 933.46,327.78 953.08,354.50 972.69,281.85 992.31,338.53 1011.92,319.13 1031.54,396.63 1051.15,284.86 1070.77,275.68 1090.38,195.73 1110.00,328.83"/>
+<line x1="330" y1="680" x2="358" y2="680" stroke="#0ea5e9" stroke-width="4"/>
+<text x="366" y="685" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">Wind</text>
+<polyline fill="none" stroke="#f59e0b" stroke-width="3" points="90.00,348.60 109.62,398.07 129.23,342.63 148.85,382.26 168.46,336.45 188.08,327.64 207.69,395.24 227.31,356.15 246.92,340.12 266.54,280.01 286.15,277.00 305.77,289.27 325.38,261.74 345.00,260.74 364.62,286.21 384.23,274.70 403.85,303.41 423.46,247.28 443.08,261.70 462.69,271.31 482.31,278.49 501.92,313.14 521.54,283.71 541.15,262.15 560.77,283.04 580.38,300.84 600.00,304.31 619.62,298.21 639.23,313.17 658.85,312.63 678.46,339.02 698.08,310.67 717.69,293.41 737.31,338.03 756.92,300.77 776.54,370.58 796.15,316.79 815.77,326.86 835.38,319.33 855.00,322.94 874.62,327.96 894.23,352.22 913.85,322.21 933.46,339.81 953.08,337.58 972.69,343.52 992.31,335.59 1011.92,375.79 1031.54,362.97 1051.15,363.68 1070.77,366.64 1090.38,392.25 1110.00,344.81"/>
+<line x1="550" y1="680" x2="578" y2="680" stroke="#f59e0b" stroke-width="4"/>
+<text x="586" y="685" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">PV</text>
+<polyline fill="none" stroke="#dc2626" stroke-width="3" points="90.00,600.00 109.62,600.00 129.23,600.00 148.85,600.00 168.46,577.32 188.08,600.00 207.69,600.00 227.31,600.00 246.92,600.00 266.54,600.00 286.15,600.00 305.77,600.00 325.38,590.48 345.00,585.94 364.62,600.00 384.23,584.74 403.85,600.00 423.46,600.00 443.08,591.04 462.69,600.00 482.31,600.00 501.92,600.00 521.54,600.00 541.15,521.14 560.77,582.75 580.38,569.22 600.00,551.09 619.62,567.65 639.23,507.22 658.85,557.49 678.46,565.03 698.08,500.15 717.69,562.98 737.31,563.09 756.92,532.76 776.54,551.67 796.15,570.63 815.77,597.35 835.38,588.45 855.00,600.00 874.62,510.13 894.23,512.33 913.85,592.49 933.46,597.37 953.08,576.18 972.69,600.00 992.31,600.00 1011.92,549.31 1031.54,565.22 1051.15,600.00 1070.77,600.00 1090.38,600.00 1110.00,600.00"/>
+<line x1="770" y1="680" x2="798" y2="680" stroke="#dc2626" stroke-width="4"/>
+<text x="806" y="685" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">Backup</text>
+</svg>

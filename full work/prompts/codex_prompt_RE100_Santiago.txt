@@ -1,0 +1,12 @@
+Prompt summary: add Santiago wind and solar data for Prof. Hohmeyer's RE100 model.
+
+Main goals:
+- Do not build a new model.
+- Keep the existing Santiago hourly load file if it is valid.
+- Download 2023 hourly wind_speed_100m and shortwave_radiation from Open-Meteo for Praia/Santiago.
+- Convert shortwave_radiation from W/m2 to kW/m2.
+- Build 8760-row wind/solar and combined RE100 input CSV files.
+- Save raw source files and exact request URLs.
+- Try NASA POWER as a weather cross-check.
+- Fill a local-only copy of the professor workbook if present, but do not commit it.
+- Add clear source notes, a simple presentation, and GitHub evidence files.

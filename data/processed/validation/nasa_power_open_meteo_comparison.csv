@@ -1,0 +1,15 @@
+metric,period,open_meteo_value,nasa_power_value,unit,notes
+annual_average_wind_speed,2023,6.645521689497717,5.653393835616438,m/s,"Open-Meteo is 100 m wind speed. NASA POWER value is WS10M at 10 m, so this is a broad cross-check only."
+annual_solar_radiation_sum,2023,2184.038,2172.5106100000003,kWh/m2 per year,Open-Meteo W/m2 converted to kWh/m2 for hourly sums. NASA POWER ALLSKY_SFC_SW_DWN treated as Wh/m2 per hour.
+monthly_solar_radiation_sum,1,155.773,156.63638,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,2,162.813,148.6495,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,3,208.696,215.21003,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,4,208.28,205.66478,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,5,209.66,209.32774,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,6,196.588,202.53228,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,7,186.705,186.73871,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,8,181.483,185.82126,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,9,178.959,175.6612,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,10,180.463,173.07695999999999,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,11,159.56,160.59217,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.
+monthly_solar_radiation_sum,12,155.058,152.5996,kWh/m2 per month,Monthly solar total cross-check. Different datasets and definitions can differ.

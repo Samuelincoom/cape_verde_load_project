@@ -1,0 +1,11 @@
+{
+  "load_rows": 8760,
+  "weather_rows": 8760,
+  "annual_load_gwh": 263.834916,
+  "average_wind_speed": 6.645521689497717,
+  "annual_solar_kwh_m2": 2184.038,
+  "nasa_succeeded": true,
+  "nasa_note": "NASA POWER cross-check succeeded. Request URL:\n\nhttps://power.larc.nasa.gov/api/temporal/hourly/point?parameters=WS10M,ALLSKY_SFC_SW_DWN&community=RE&longitude=-23.5167&latitude=14.9167&start=20230101&end=20231231&format=JSON&time-standard=LST\n",
+  "local_workbook_created": true,
+  "local_workbook_path": "C:\\Users\\Fiifi\\Desktop\\cape_verde_load_project\\RE100_Model_Santiago_2023_filled_LOCAL_ONLY.xlsx"
+}

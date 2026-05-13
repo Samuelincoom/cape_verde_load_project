@@ -66,3 +66,18 @@ Reconstructed or modeled data:
 - Scenario capacities and storage values marked as scenario assumptions, not verified existing Santiago assets
 
 Electricity Maps Cabo Verde data, when available, is used only as a national zone shape benchmark. It is not official Santiago hourly meter data and must not be treated as Santiago SCADA truth.
+
+## Added Wind and Solar Data for Santiago
+
+We added 2023 hourly wind and solar data for Santiago using the Open-Meteo Historical Weather API.
+
+- Year: 2023, with 8760 hourly rows.
+- Location: Praia/Santiago default coordinates, latitude 14.9167, longitude -23.5167.
+- Wind: `wind_speed_100m` in m/s.
+- Solar: `shortwave_radiation` from Open-Meteo in W/m2, converted to kW/m2 by dividing by 1000.
+- Processed weather file: `data/processed/model_inputs/santiago_wind_solar_2023_8760.csv`.
+- Combined RE100 input file: `data/processed/model_inputs/re100_santiago_combined_inputs_2023.csv`.
+- Raw Open-Meteo file: `data/raw/wind_solar/open_meteo_santiago_2023_hourly_weather_raw.json`.
+- Exact Open-Meteo request URL: `https://archive-api.open-meteo.com/v1/archive?latitude=14.9167&longitude=-23.5167&start_date=2023-01-01&end_date=2023-12-31&hourly=wind_speed_100m,shortwave_radiation&wind_speed_unit=ms&timezone=Atlantic%2FCape_Verde`.
+- The professor workbook is not uploaded unless sharing permission is confirmed. A local-only filled copy may exist on this laptop.
+

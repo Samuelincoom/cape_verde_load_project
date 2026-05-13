@@ -1,0 +1,11 @@
+check,value,expected,status,notes
+load_rows,8760,8760,pass,
+wind_solar_rows,8760,8760,pass,
+combined_rows,8760,8760,pass,
+annual_load_gwh,263.834916,about 263.839,pass,
+average_wind_speed_m_s,6.645521689497717,"not negative, plausible",pass,
+annual_solar_kwh_m2,2184.038,not negative,pass,
+nasa_power_cross_check,succeeded,attempted,pass,"NASA POWER cross-check succeeded. Request URL:
+
+https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=WS10M,ALLSKY_SFC_SW_DWN&community=RE&longitude=-23.5167&latitude=14.9167&start=20230101&end=20231231&format=JSON&time-standard=LST
+"
